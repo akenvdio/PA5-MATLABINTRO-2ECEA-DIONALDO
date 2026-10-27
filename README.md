@@ -32,28 +32,28 @@ For each matrix, compute and display `transpose(A)`, `A'`, and `A.'`. Below the 
 ```
 % Matrix R 
 R = [ 5 -2  0  7;
-      1  3 -4  2;
-      6  0  8 -1];
+    1  3 -4  2;
+    6  0  8 -1];
 
 R
 
 % Matrix R transpose forms
-transpose(R)
+Transpose_R = transpose(R)
 
-R'
+R_Apostrophe = R'
 
-R.'
+R_Dot_Apostrophe = R.'
 
 % Matrix Z 
 Z = [ 2+3i  -1+4i   5-2i; -3+1i   6      2+5i];
 Z
 
 % Matrix Z transpose forms
-transpose(Z)
+Transpose_Z = transpose(Z)
 
-Z'
+Z_Apostrophe = Z'
 
-Z.'
+Z_Dot_Apostrophe = Z.'
 ```
 
 **OUTPUT**
@@ -64,21 +64,21 @@ R = 3×4
      6      0      8     -1
 
 
-ans = 4×3
+Transpose_R = 4×3
       5      1      6
      -2      3      0
       0     -4      8
       7      2     -1
 
 
-ans = 4×3
+R_Apostrophe = 4×3
       5      1      6
      -2      3      0
       0     -4      8
       7      2     -1
 
 
-ans = 4×3
+R_Dot_Apostrophe = 4×3
       5      1      6
      -2      3      0
       0     -4      8
@@ -90,19 +90,19 @@ Z = 2×3 complex
      -3.0000 + 1.0000i      6.0000 + 0.0000i     2.0000 + 5.0000i
 
 
-ans = 3×2 complex
+Transpose_Z = 3×2 complex
       2.0000 + 3.0000i     -3.0000 + 1.0000i
      -1.0000 + 4.0000i      6.0000 + 0.0000i
       5.0000 - 2.0000i      2.0000 + 5.0000i
 
 
-ans = 3×2 complex
+Z_Apostrophe = 3×2 complex
       2.0000 - 3.0000i     -3.0000 - 1.0000i
      -1.0000 - 4.0000i      6.0000 + 0.0000i
       5.0000 + 2.0000i      2.0000 - 5.0000i
 
 
-ans = 3×2 complex
+Z_Dot_Apostrophe = 3×2 complex
       2.0000 + 3.0000i     -3.0000 + 1.0000i
      -1.0000 + 4.0000i      6.0000 + 0.0000i
       5.0000 - 2.0000i      2.0000 + 5.0000i
@@ -149,7 +149,7 @@ b = [16; -7; 6; 7];
 b
 
 % Determinant A
-det(A)
+detA = det(A)
 
 % Inverse Method
 x_inv = inv(A) * b;
@@ -161,6 +161,18 @@ A2 = A; A2(:, 2) = b;
 A3 = A; A3(:, 3) = b;
 A4 = A; A4(:, 4) = b;
 
+A1
+detA1 = det(A1)
+
+A2
+detA2 = det(A2)
+
+A3
+detA3 = det(A3)
+
+A4
+detA4 = det(A4)
+
 x_cramer = [det(A1); 
             det(A2); 
             det(A3); 
@@ -168,5 +180,111 @@ x_cramer = [det(A1);
 x_cramer
 
 % Numerical precision
-norm(x_inv-x_cramer)
-norm(A * x_inv - b)
+normdiff = norm(x_inv-x_cramer)
+normprod = norm(A * x_inv - b)
+```
+
+**OUTPUT**
+```
+A = 4×4
+      2     -1      3      2
+      1      4     -2      1
+      3      2      1     -1
+     -2      3      4      2
+
+
+b = 4×1
+     16
+     -7
+      6
+      7
+
+
+detA =
+
+   280
+
+
+x_inv = 4×1
+      2.0000
+     -1.0000
+      3.0000
+      1.0000
+
+
+A1 = 4×4
+     16     -1      3      2
+     -7      4     -2      1
+      6      2      1     -1
+      7      3      4      2
+
+
+detA1 =
+
+   560
+
+
+A2 = 4×4
+      2     16      3      2
+      1     -7     -2      1
+      3      6      1     -1
+     -2      7      4      2
+
+
+detA2 =
+
+  -280
+
+
+A3 = 4×4
+      2     -1     16      2
+      1      4     -7      1
+      3      2      6     -1
+     -2      3      7      2
+
+
+detA3 =
+
+  840.0000
+
+
+A4 = 4×4
+      2     -1      3     16
+      1      4     -2     -7
+      3      2      1      6
+     -2      3      4      7
+
+
+detA4 =
+
+   280
+
+
+x_cramer = 4×1
+      2.0000
+     -1.0000
+      3.0000
+      1.0000
+
+
+normdiff =
+
+   1.1102e-16
+
+
+normprod =
+
+   2.6645e-15
+```
+
+The following functions and methods in this code are:
+- `A = [...]`: Defines the 4x4 coefficient matrix A.
+- `b = [...]`: Defines the 4x1 constant column vector b.
+- `det(A)`: Computes the determinant of matrix A to ensure non-singularity (det(A) is not equal to 0).
+- `inv(A)*b`: Calculates the solution vector x_inv using the matrix inverse method.
+- `A1(:, 1) = b, A2(:, 2) = b, etc.`: Replaces the k-th column of the coefficient matrix A with vector b to form modified matrices for Cramer's Rule.
+- `[det(A1); det(A2); det(A3); det(A4)] / det(A)`: Solves for each variable using Cramer's Rule ratio of determinants.
+- `norm(x_inv - x_cramer)`: Evaluates the norm of the difference vector between solutions to check equivalence.
+- `norm(A * x_inv - b)`: Calculates the residual norm to verify the accuracy of the computed solution.
+
+To view the program file for PA5, please visit this link: [DIONALDO_PA5.m](https://github.com/akenvdio/PA3-PANDAS-2ECEA-DIONALDO/blob/29fab170a011d2a49972622410502582bb5ff385/PA3_2ECEA_DIONALDO.ipynb) and download it. Open on MATLAB and run all sections.
