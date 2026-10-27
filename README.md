@@ -133,7 +133,7 @@ Construct coefficient matrix **A** and right-hand-side vector **b**.
 Solve the system using: 
 - Matrix Inverse Method `(x_inv = A^-1 b)`
 - Cramer's Rule using column substitution and determinants `(x_cramer)`
-- Perform numerical checks by displaying `det(A)`, `norm(x_inv - x_cramer)`, and `norm(A x_inv - b)`.\
+- Perform numerical checks by displaying `det(A)`, `norm(x_inv - x_cramer)`, and `norm(A x_inv - b)`.
 
 **CODE**
 ```
@@ -287,8 +287,13 @@ The following functions and methods in this code are:
 - `norm(x_inv - x_cramer)`: Evaluates the norm of the difference vector between solutions to check equivalence.
 - `norm(A * x_inv - b)`: Calculates the residual norm to verify the accuracy of the computed solution.
 
-To view the program file for PA5, please visit this link: [DIONALDO_PA5.m](https://github.com/akenvdio/PA5-MATLABINTRO-2ECEA-DIONALDO) and download it. Open on MATLAB and run all sections.
+To view the program file for PA5, please visit this link: [DIONALDO_PA5.m](https://github.com/akenvdio/PA5-MATLABINTRO-2ECEA-DIONALDO/blob/main/DIONALDO_PA5.m) and download it. Open on MATLAB and run all sections.
 
+---
 ## **README File Version History**
 - October 27, 2026 - Upload .m file
-- September 27, 2026 - Upload README file
+- October 27, 2026 - Upload README file
+---
+
+### **END OF NOTEBOOK**
+
