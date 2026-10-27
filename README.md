@@ -1,12 +1,12 @@
 # PA5 | ECE2112 | EXPERIMENT 5 | DIONALDO, PVA
 ---
-### **INTRODUCTION TO MATLAB**
+### **INTRODUCTION TO MATLAB 🧑‍🔬**
 #### Submitted by Pierre Van Aken A. Dionaldo | 2ECE-A | 10.27.2026
 
 This repository showcases the objective and detailed discussion of the experiment from Programming Assignment 5 on October 20, 2026, where the class discussed Module 5 - **Introduction to MATLAB**
 
 ---
-### **Objectives**
+### **Objectives 🎯**
 ---
 At the end of this laboratory activity, the student should be able to:
 
@@ -20,9 +20,9 @@ matrices and numerical checks. Use MATLAB matrix operations and built-in functio
 a computed answer directly into the output.
 
 ---
-### **Programming Problems**
+### **Programming Problems ✍️**
 ---
-#### **A. TRANSPOSE OPERATIONS**
+#### **A. TRANSPOSE OPERATIONS 🧮**
 
 Define the real matrix **R** and complex matrix **Z**
 
@@ -142,7 +142,7 @@ The following functions and methods in this code are:
 - `Z'`: Computes the complex-conjugate transpose of the complex matrix Z (flips row/column indices and negates imaginary parts).
 - `Z.'`: Computes the array non-conjugate transpose of complex matrix Z (flips row/column indices while preserving imaginary signs).
 
-#### **B. TWO METHODS FOR A LINEAR SYSTEM**
+#### **B. TWO METHODS FOR A LINEAR SYSTEM 📐**
 
 Solve the simultaneous system of linear equations
 Construct coefficient matrix **A** and right-hand-side vector **b**. 
@@ -306,7 +306,7 @@ The following functions and methods in this code are:
 To view the program file for PA5, please visit this link: [DIONALDO_PA5.m](https://github.com/akenvdio/PA5-MATLABINTRO-2ECEA-DIONALDO/blob/main/DIONALDO_PA5.m) and download it. Open on MATLAB and run all sections.
 
 ---
-## **README File Version History**
+## **README File Version History 👋**
 - October 27, 2026 - Upload .m file
 - October 27, 2026 - Upload README file
 ---
