@@ -142,6 +142,7 @@ The following functions and methods in this code are:
 - `Z'`: Computes the complex-conjugate transpose of the complex matrix Z (flips row/column indices and negates imaginary parts).
 - `Z.'`: Computes the array non-conjugate transpose of complex matrix Z (flips row/column indices while preserving imaginary signs).
 
+---
 #### **B. TWO METHODS FOR A LINEAR SYSTEM 📐**
 
 Solve the simultaneous system of linear equations
