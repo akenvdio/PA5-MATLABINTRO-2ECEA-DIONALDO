@@ -1,4 +1,4 @@
- # PA5 | ECE2112 | EXPERIMENT 5 | DIONALDO, PVA
+# PA5 | ECE2112 | EXPERIMENT 5 | DIONALDO, PVA
 ---
 ### **INTRODUCTION TO MATLAB**
 #### Submitted by Pierre Van Aken A. Dionaldo | 2ECE-A | 10.27.2026
@@ -106,9 +106,25 @@ Z_Dot_Apostrophe = 3×2 complex
       2.0000 + 3.0000i     -3.0000 + 1.0000i
      -1.0000 + 4.0000i      6.0000 + 0.0000i
       5.0000 - 2.0000i      2.0000 + 5.0000i
+
+% Answer the following in MATLAB comments below your output:
+% a. Which operations give identical results for the real matrix R?
+% -- All three operations — transpose(R), R', and R.' — produce
+%    identical results for the real matrix R because all elements 
+%    are purely real.
+%
+% b. Which two operations give identical results for the complex matrix Z?
+% -- transpose(Z) and Z.' give identical results for the complex 
+%    matrix Z. Both compute the non-conjugate transpose (array transpose).
+%
+% c. What additional operation is performed by the apostrophe operator (')
+%    when the matrix contains complex entries?
+% -- The single apostrophe operator (') computes the complex-conjugate
+%    transpose. In addition to swapping rows and columns,
+%    it negates the imaginary component of each complex element.
 ```
 
-*Answer the following in MATLAB comments below your output:*
+*ANSWER TO THE QUESTIONS GIVEN IN THE PROGRAMMING ASSIGNMENT:*
 - a. Which operations give identical results for the real matrix R?
   `All three operations — transpose(R), R', and R.' — produce identical results for the real matrix R because all elements are purely real.`
 - b. Which two operations give identical results for the complex matrix Z?
@@ -123,7 +139,7 @@ The following functions and methods in this code are:
 - `R.'`: Computes the array (non-conjugate) transpose of real matrix R.
 - `Z = [...]`: Creates the 2x3 complex matrix Z.
 - `transpose(Z)`: Computes the standard non-conjugate transpose of complex matrix Z.
-- `Z'`: Computes the complex-conjugate transpose of complex matrix Z (flips row/column indices and negates imaginary parts).
+- `Z'`: Computes the complex-conjugate transpose of the complex matrix Z (flips row/column indices and negates imaginary parts).
 - `Z.'`: Computes the array non-conjugate transpose of complex matrix Z (flips row/column indices while preserving imaginary signs).
 
 #### **B. TWO METHODS FOR A LINEAR SYSTEM**
