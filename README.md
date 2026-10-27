@@ -109,12 +109,12 @@ Z_Dot_Apostrophe = 3×2 complex
 ```
 
 *Answer the following in MATLAB comments below your output:*
-a. Which operations give identical results for the real matrix R?
--- All three operations — transpose(R), R', and R.' — produce identical results for the real matrix R because all elements are purely real.
-b. Which two operations give identical results for the complex matrix Z?
--- transpose(Z) and Z.' give identical results for the complex matrix Z. Both compute the non-conjugate transpose (array transpose).
-c. What additional operation is performed by the apostrophe operator (') when the matrix contains complex entries?
--- The single apostrophe operator (') computes the complex-conjugate transpose. In addition to swapping rows and columns, it negates the imaginary component of each complex element.
+- a. Which operations give identical results for the real matrix R?
+  `All three operations — transpose(R), R', and R.' — produce identical results for the real matrix R because all elements are purely real.`
+- b. Which two operations give identical results for the complex matrix Z?
+  `transpose(Z) and Z.' give identical results for the complex matrix Z. Both compute the non-conjugate transpose (array transpose).`
+- c. What additional operation is performed by the apostrophe operator (') when the matrix contains complex entries?
+  `The single apostrophe operator (') computes the complex-conjugate transpose. In addition to swapping rows and columns, it negates the imaginary component of each complex element.`
 
 The following functions and methods in this code are:
 - `R = [...]`: Creates the 3x4 real matrix R
